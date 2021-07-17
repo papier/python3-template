@@ -1,20 +1,26 @@
 """Start the application."""
 import os
 import signal
+import typing
+import types
 
 
-def main():
+def main() -> None:
     """Install signal handlers and start the application."""
-    run_flag = True
-    received_signal = None
+    run_flag: bool = True
+    received_signum: typing.Optional[signal.Signals] = None
 
-    def create_signal_handler(handled_signal):
-        def handler(signal, frame):
+    def create_signal_handler(
+        signum_to_handle: signal.Signals,
+    ) -> typing.Callable[[signal.Signals, types.FrameType], typing.Any]:
+        def handler(
+            signum: signal.Signals, frame: typing.Optional[types.FrameType]
+        ) -> typing.Any:
             nonlocal run_flag
-            nonlocal received_signal
+            nonlocal received_signum
             if run_flag:
                 run_flag = False
-                received_signal = handled_signal
+                received_signum = signum_to_handle
 
         return handler
 
@@ -25,11 +31,11 @@ def main():
     while run_flag:
         pass
 
-    if received_signal is not None:
+    if received_signum is not None:
         # Restore default signal handler
-        signal.signal(received_signal, signal.SIG_DFL)
+        signal.signal(received_signum, signal.SIG_DFL)
         # Resend the signal to this process
-        os.kill(os.getpid(), received_signal)
+        os.kill(os.getpid(), received_signum)
 
 
 if __name__ == "__main__":

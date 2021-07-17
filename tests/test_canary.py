@@ -2,7 +2,7 @@ import unittest
 
 
 class TestCanaray(unittest.TestCase):
-    def test_canary(self):
+    def test_canary(self) -> None:
         self.assertTrue(True)
 
 
