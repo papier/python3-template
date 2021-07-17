@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+source venv/bin/activate
+black .
+flake8 project
+mypy project tests
+pytype project tests
+python3 -m unittest
