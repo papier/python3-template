@@ -1,5 +1,5 @@
 {
   "python.testing.unittestEnabled": true,
   "python.linting.flake8Enabled": true,
-  "python.pythonPath": "venv/bin/python3.9"
+  "python.pythonPath": ".venv/bin/python3.9"
 }

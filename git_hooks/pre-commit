@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-source venv/bin/activate
+source .venv/bin/activate
 black .
 flake8 project
 mypy project tests
