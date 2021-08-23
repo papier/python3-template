@@ -1,8 +1,8 @@
 """Start the application."""
 import os
 import signal
-import typing
 import types
+import typing
 
 
 def main() -> None:

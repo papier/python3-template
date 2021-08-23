@@ -2,6 +2,7 @@
 set -euo pipefail
 source .venv/bin/activate
 black .
+isort project tests
 flake8 project tests
 mypy project tests
 python3 -m unittest
