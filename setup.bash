@@ -12,4 +12,5 @@ python3.9 -m venv --prompt python-template .venv
 # Install required packages into local virtual environment
 source .venv/bin/activate
 python3.9 -m pip install --upgrade pip
+pip install --upgrade --upgrade-strategy eager -r requirements-dev.txt
 pip install --upgrade --upgrade-strategy eager -r requirements.txt
