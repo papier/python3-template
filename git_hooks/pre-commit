@@ -2,6 +2,6 @@
 set -euo pipefail
 source .venv/bin/activate
 black .
-flake8 project
+flake8 project tests
 mypy project tests
 python3 -m unittest
