@@ -10,4 +10,4 @@ It takes care of the following:
   hook
 - Provide .vscode launch.json and local settings.json
 
-See [requirements.txt](requirements.txt) for used packages.
+See [requirements-dev.txt](requirements-dev.txt) for used packages.
