@@ -1,5 +1,6 @@
 black
 isort
+docformatter
 flake8
 flake8-docstrings
 pep8-naming
