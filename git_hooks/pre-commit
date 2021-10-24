@@ -3,7 +3,6 @@ source .venv/bin/activate
 set -euo pipefail
 black --check project tests
 isort --check project tests
-docformatter --check -r project tests
 flake8 project tests
 mypy project tests
 python3 -m unittest
