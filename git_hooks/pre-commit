@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 source .venv/bin/activate
 set -euo pipefail
-black --check project tests
-isort --check project tests
-flake8 project tests
-mypy project tests
+black --check src/project tests
+isort --check src/project tests
+flake8 src/project tests
+mypy src/project tests
 python3 -m unittest

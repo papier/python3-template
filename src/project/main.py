@@ -12,7 +12,12 @@ def main() -> None:
 
     def create_signal_handler(
         signum_to_handle: signal.Signals,
-    ) -> typing.Callable[[signal.Signals, types.FrameType], typing.Any]:
+    ) -> typing.Union[
+        typing.Callable[[int, typing.Optional[signal.FrameType]], typing.Any],
+        int,
+        signal.Handlers,
+        None,
+    ]:
         def handler(
             signum: signal.Signals, frame: typing.Optional[types.FrameType]
         ) -> typing.Any:
