@@ -13,14 +13,12 @@ def main() -> None:
     def create_signal_handler(
         signum_to_handle: signal.Signals,
     ) -> typing.Union[
-        typing.Callable[[int, typing.Optional[signal.FrameType]], typing.Any],
+        typing.Callable[[int, typing.Optional[types.FrameType]], typing.Any],
         int,
         signal.Handlers,
         None,
     ]:
-        def handler(
-            signum: signal.Signals, frame: typing.Optional[types.FrameType]
-        ) -> typing.Any:
+        def handler(signum: int, frame: typing.Optional[types.FrameType]) -> typing.Any:
             nonlocal run_flag
             nonlocal received_signum
             if run_flag:
