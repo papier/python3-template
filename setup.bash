@@ -13,4 +13,5 @@ python3.10 -m venv --prompt python-template .venv
 source .venv/bin/activate
 python3.10 -m pip install --upgrade pip
 pip install --upgrade --upgrade-strategy eager -r requirements.txt
-pip install -e .
+# This installs the project in develop mode
+pip install --editable .
