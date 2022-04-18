@@ -8,7 +8,7 @@ ln -sf ../../git_hooks/pre-commit .git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
 
 # Setup local virtual environment
-python3.10 -m venv --prompt python-template .venv
+python3.10 -m venv --prompt project .venv
 # Install required packages into local virtual environment
 source .venv/bin/activate
 python3.10 -m pip install --upgrade pip
