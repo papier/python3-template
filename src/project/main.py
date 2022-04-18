@@ -18,7 +18,7 @@ def main() -> None:
         signal.Handlers,
         None,
     ]:
-        def handler(signum: int, frame: typing.Optional[types.FrameType]) -> typing.Any:
+        def handler(_: int, _1: typing.Optional[types.FrameType]) -> typing.Any:
             nonlocal run_flag
             nonlocal received_signum
             if run_flag:
