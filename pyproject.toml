@@ -16,3 +16,7 @@ pretty = true
 show_error_codes = true
 
 disallow_any_unimported = true
+
+
+[tool.isort]
+profile = 'black'
