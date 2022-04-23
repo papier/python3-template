@@ -1,9 +1,10 @@
 {
     "python.testing.unittestEnabled": true,
-    "python.linting.flake8Enabled": true,
     "[python]": {
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         }
-    }
+    },
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
