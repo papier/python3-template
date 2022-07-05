@@ -12,9 +12,7 @@ dependencies = [
 [project.optional-dependencies]
 test = [
     "black",
-    "mypy",
     "isort",
-    "pylint",
 ]
 
 
@@ -22,28 +20,8 @@ test = [
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-# [tool.setuptools.packages.find]
-# where = ["src"]
-
-[tool.mypy]
-python_version = "3.10"
-warn_unused_ignores = true
-warn_unused_configs = true
-
-disallow_untyped_defs = true
-check_untyped_defs = true
-warn_return_any = true
-warn_unreachable = true
-no_implicit_optional = true
-
-strict_equality = true
-
-pretty = true
-
-show_error_codes = true
-
-disallow_any_unimported = true
-
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.isort]
 profile = "black"

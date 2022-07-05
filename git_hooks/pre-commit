@@ -3,6 +3,4 @@ source .venv/bin/activate
 set -euo pipefail
 black --check src/project tests
 isort --check src/project tests
-pylint src/project tests
-mypy src/project tests
 python3 -m unittest
